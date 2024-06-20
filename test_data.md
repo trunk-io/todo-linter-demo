@@ -12,7 +12,7 @@ version: 0.1
 const a = !!!false;
 ```
 
-<!-- mastodon is not a fixme -->
+<!-- MASTODON is not a fixme -->
 <!-- But THIS is something that should DONOTLAND -->
 
 ## Another Heading

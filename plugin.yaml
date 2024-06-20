@@ -15,7 +15,7 @@ lint:
       files: [ALL]
       commands:
         - name: lint
-          run: bash -c "grep -o -E 'TODO' --line-number --with-filename ${target}"
+          run: bash -c "grep -o -E 'TODO[\W]' --line-number --with-filename ${target}"
           success_codes: [0, 1]
           parser:
             run: 'sed -E "s/([^:]*):([0-9]+):(.*)/\1:\2:0: [error] Found \3 in line (TODO)/"'
