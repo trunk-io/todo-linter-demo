@@ -1,0 +1,6 @@
+extends: existence
+message: Don't use TODO
+level: warning
+scope: [raw, text]
+tokens:
+  - TODO

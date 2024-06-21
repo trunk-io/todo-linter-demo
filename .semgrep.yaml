@@ -1,0 +1,7 @@
+rules:
+  - id: check-for-todo
+    languages:
+      - generic
+    severity: ERROR
+    message: Don't use TODO
+    pattern: TODO

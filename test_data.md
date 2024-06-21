@@ -19,6 +19,8 @@ const a = !!!false;
 
 Look at all the ways to check for todo!
 
-<!-- trunk-ignore(todo-grep-linter) -->
+<!-- trunk-ignore-begin(todo-grep-wrapped) -->
 
 Let's ignore this TODO though.
+
+<!-- trunk-ignore-end(todo-grep-wrapped) -->

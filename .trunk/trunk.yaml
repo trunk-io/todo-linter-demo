@@ -6,7 +6,7 @@ plugins:
     - id: trunk
       ref: v1.6.0
       uri: https://github.com/trunk-io/plugins
-    - id: grep-linters
+    - id: todo-linters
       local: .
       # Definitions provided in plugin.yaml
       # You can source this repo yourself by using:
@@ -36,8 +36,30 @@ lint:
     - yamllint@1.35.1
     # TODO linters
     - trunk-toolbox@0.3.1
-    - todo-grep-linter
+    # - todo-grep-linter
+    - todo-grep-wrapped
+    - cspell@8.9.0
+    - codespell@2.3.0
+    - vale@3.6.0
+    - semgrep@1.76.0
+    - eslint@9.5.0
 
   ignore:
-    - linters: [todo-grep-linter]
-      paths: [plugin.yaml, todo_grep.sh, .trunk/trunk.yaml]
+    - linters:
+        - todo-grep-linter
+        - todo-grep-wrapped
+        - cspell
+        - codespell
+        - vale
+        - semgrep
+      paths:
+        - plugin.yaml
+        - todo_grep.sh
+        - .trunk/trunk.yaml
+        - README.md
+        - cspell.yaml
+        - .codespellrc
+        - todo_dict.txt
+        - .vale.ini
+        - styles/**
+        - .semgrep.yaml
