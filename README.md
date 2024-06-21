@@ -36,7 +36,7 @@ trunk check --filter=trunk-toolbox test_data.md
 To run outside Trunk, run:
 
 ```bash
-.trunk/tools/toolbox test_data.md
+.trunk/tools/trunk-toolbox test_data.md
 ```
 
 ## grep linter
@@ -120,5 +120,5 @@ trunk check --filter=semgrep test_data.md
 To run outside Trunk, run:
 
 ```bash
-.trunk/tools/semgrep test_data.md
+.trunk/tools/semgrep --config=auto --config=.semgrep.yaml -q --include=test_data.md
 ```
