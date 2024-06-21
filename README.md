@@ -8,7 +8,6 @@ An exploration of different ways to build a TODO linter, including:
 - [codespell](#codespell)
 - [Vale](#vale)
 - [Semgrep](#semgrep)
-- [eslint plugin](#eslint-plugin)
 
 ## Prerequisites
 
@@ -123,5 +122,3 @@ To run outside Trunk, run:
 ```bash
 .trunk/tools/semgrep test_data.md
 ```
-
-## eslint plugin

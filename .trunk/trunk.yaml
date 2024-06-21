@@ -42,7 +42,6 @@ lint:
     - codespell@2.3.0
     - vale@3.6.0
     - semgrep@1.76.0
-    - eslint@9.5.0
 
   ignore:
     - linters:
