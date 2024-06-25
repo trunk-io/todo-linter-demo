@@ -25,38 +25,6 @@ plugins:
       uri: https://github.com/trunk-io/todo-linter-demo
 ```
 
-## trunk-toolbox
-
-To run with Trunk, run:
-
-```bash
-trunk check --filter=trunk-toolbox test_data.md
-```
-
-To run outside Trunk, run:
-
-```bash
-.trunk/tools/trunk-toolbox test_data.md
-```
-
-## grep linter
-
-This grep linter setup is dependent on:
-
-- `todo_grep.sh`
-
-To run with Trunk, run:
-
-```bash
-trunk check --filter=todo-grep-wrapped test_data.md
-```
-
-To run outside Trunk, run:
-
-```bash
-./todo_grep.sh test_data.md
-```
-
 ## CSpell
 
 This CSpell linter setup is dependent on:
@@ -121,4 +89,40 @@ To run outside Trunk, run:
 
 ```bash
 .trunk/tools/semgrep --config=auto --config=.semgrep.yaml -q --include=test_data.md
+```
+
+## trunk-toolbox
+
+This trunk-toolbox linter setup is dependent on:
+
+- `toolbox.toml`
+
+To run with Trunk, run:
+
+```bash
+trunk check --filter=trunk-toolbox test_data.md
+```
+
+To run outside Trunk, run:
+
+```bash
+.trunk/tools/trunk-toolbox --output-format=text test_data.md
+```
+
+## grep linter
+
+This grep linter setup is dependent on:
+
+- `todo_grep.sh`
+
+To run with Trunk, run:
+
+```bash
+trunk check --filter=todo-grep-wrapped test_data.md
+```
+
+To run outside Trunk, run:
+
+```bash
+./todo_grep.sh test_data.md
 ```

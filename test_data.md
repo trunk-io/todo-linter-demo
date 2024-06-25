@@ -13,14 +13,13 @@ const a = !!!false;
 ```
 
 <!-- MASTODON is not a fixme -->
-<!-- But THIS is something that should DONOTLAND -->
 
 ## Another Heading
 
 Look at all the ways to check for todo!
 
-<!-- trunk-ignore-begin(todo-grep-wrapped,codespell,cspell,vale,semgrep) -->
+<!-- trunk-ignore-begin(todo-grep-wrapped,codespell,cspell,vale,semgrep,trunk-toolbox) -->
 
 Let's ignore this TODO though.
 
-<!-- trunk-ignore-end(todo-grep-wrapped,codespell,cspell,vale,semgrep) -->
+<!-- trunk-ignore-end(todo-grep-wrapped,codespell,cspell,vale,semgrep,trunk-toolbox) -->
