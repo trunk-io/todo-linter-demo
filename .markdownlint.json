@@ -1,0 +1,14 @@
+{
+  "default": true,
+  "extends": "markdownlint/style/prettier",
+  "MD026": false,
+  "search-replace": {
+    "rules": [
+      {
+        "name": "found-todo",
+        "message": "Don't use todo",
+        "searchPattern": "/TODO/gi"
+      }
+    ]
+  }
+}

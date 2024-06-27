@@ -2,12 +2,13 @@
 
 An exploration of different ways to build a TODO linter, including:
 
-- [trunk-toolbox](#trunk-toolbox)
-- [custom `grep` linter](#grep-linter)
+- [markdownlint](#markdownlint)
 - [CSpell](#cspell)
 - [codespell](#codespell)
 - [Vale](#vale)
 - [Semgrep](#semgrep)
+- [trunk-toolbox](#trunk-toolbox)
+- [custom `grep` linter](#grep-linter)
 
 ## Prerequisites
 
@@ -23,6 +24,22 @@ plugins:
     - id: todo-linters
       ref: v0.1.0
       uri: https://github.com/trunk-io/todo-linter-demo
+```
+
+## markdownlint
+
+This markdownlint linter setup is dependent on:
+
+- `.markdownlint.json`
+
+```bash
+trunk check --filter=markdownlint test_data.md
+```
+
+To run outside Trunk, run:
+
+```bash
+.trunk/tools/markdownlint test_data.md
 ```
 
 ## CSpell

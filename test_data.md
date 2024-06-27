@@ -20,6 +20,6 @@ Look at all the ways to check for todo!
 
 <!-- trunk-ignore-begin(todo-grep-wrapped,codespell,cspell,vale,semgrep,trunk-toolbox) -->
 
-Let's ignore this TODO though.
+Let's ignore this TODO though
 
 <!-- trunk-ignore-end(todo-grep-wrapped,codespell,cspell,vale,semgrep,trunk-toolbox) -->
