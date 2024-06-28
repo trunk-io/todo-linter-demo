@@ -53,15 +53,16 @@ lint:
         # - todo-grep-linter
         - todo-grep-wrapped
       paths:
-        - plugin.yaml
-        - todo_grep.sh
-        - .trunk/trunk.yaml
-        - README.md
         - cspell.yaml
         - .codespellrc
-        - todo_dict.txt
-        - .vale.ini
-        - styles/**
-        - .semgrep.yaml
-        - toolbox.toml
+        - generate_demo.sh
         - .markdownlint.json
+        - plugin.yaml
+        - README.md
+        - .semgrep.yaml
+        - styles/**
+        - todo_dict.txt
+        - todo_grep.sh
+        - toolbox.toml
+        - .trunk/trunk.yaml
+        - .vale.ini

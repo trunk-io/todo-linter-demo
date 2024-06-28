@@ -39,7 +39,7 @@ trunk check --filter=markdownlint test_data.md
 To run outside Trunk, run:
 
 ```bash
-.trunk/tools/markdownlint test_data.md
+.trunk/tools/markdownlint -r markdownlint-rule-search-replace test_data.md
 ```
 
 ## CSpell
