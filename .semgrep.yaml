@@ -4,4 +4,6 @@ rules:
       - generic
     severity: ERROR
     message: Don't use TODO
-    pattern: TODO
+    pattern-either:
+      - pattern: TODO
+      - pattern: todo
