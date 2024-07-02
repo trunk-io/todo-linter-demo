@@ -2,19 +2,24 @@
 
 set -euo pipefail
 
+# Uses https://github.com/charmbracelet/freeze/pull/113
+freeze_path="${FREEZE:-freeze}"
+trunk_path=../trunk/bazel-bin/trunk/cli/cli
+
 function freeze_linter() {
-	freeze --theme=dracula -o "${2}" --execute "bash -c 'echo $ ${1}; ${1} || true'"
+	${freeze_path} --theme=catppuccin-mocha --execute-non-zero -o "${2}" --execute "bash -c 'echo $ ${1}; ${1}'"
 }
 
 function freeze_trunk() {
-	freeze --theme=dracula -o "${2/tb/trunk}" --execute "bash -c '${1} --no-progress --show-existing'"
+	# freeze does not support ending with an ANSI escape code, so add empty text
+	# Also modify the color codes to work better for freeze's themes.
+	${freeze_path} --theme=catppuccin-mocha --execute-non-zero -o "${2}" --execute "bash -c 'echo $ ${1/${trunk_path}/trunk}; ${1} --no-progress --show-existing --upstream=false | sed s/✖/x/ | sed s/30m/104m/; echo -n \" \"'"
 }
 
 mkdir -p screenshots
 
 # Requires a pre-release version of Trunk
-tb=../trunk/bazel-bin/trunk/cli/cli
-freeze_trunk "${tb} check --filter=markdownlint test_data.md" "screenshots/markdownlint_trunk.png"
+freeze_trunk "${trunk_path} check --filter=markdownlint test_data.md" "screenshots/markdownlint_trunk.png"
 freeze_linter ".trunk/tools/markdownlint -r markdownlint-rule-search-replace test_data.md" "screenshots/markdownlint.png"
 
 freeze_trunk "trunk check --filter=cspell test_data.md" "screenshots/cspell_trunk.png"
